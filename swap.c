@@ -7,11 +7,16 @@
  */
 int swap(int x, int y)
 {
-	int temp;
+	int *temp;
+	int *ezra, *joss;
 
-	temp = x;
-	x = y;
-	y = temp;
+	ezra = &x;
+	joss = &y;
+	printf("the address of x is %p and the address of y is %p\n",ezra ,joss);
+	temp = ezra;
+	ezra = joss;
+	joss = temp;
 	printf("%d %d \n",x ,y);
+	printf("the address of x is %p and the address of y is %p\n",ezra ,joss);
 	return (0);
 }
